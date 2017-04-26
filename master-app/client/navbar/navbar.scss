@@ -1,0 +1,25 @@
+.navbar {
+   background-color: $dark;
+   ul {
+      list-style: none;
+      padding: 0px;
+      padding-left: 10px;
+      li {
+         display: inline-block;
+         border-right: 1px solid $cup;
+      }
+      a {
+         padding: 5px;
+         display: block;
+         color: $blue;
+         text-decoration: none;
+         &:hover {
+            background-color: $yellow;
+         }
+         &:active {
+            color: $blue;
+            background-color: #000;
+         }
+      }
+   }
+}

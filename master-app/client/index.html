@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <base href="/">
+      <meta charset="UTF-8">
+      <title>App</title>
+      <script src="http://192.168.0.2:4000/bower_components/angular/angular.min.js"></script>
+      <script src="http://192.168.0.2:4000/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+   </head>
+   <body ng-app="app">
+
+      <navbar></navbar>
+
+      <h1>App</h1>
+
+
+      <h2>Things to do</h2>
+      <ol>
+         <li>Angular UI Router</li>
+      </ol>
+
+      <ul class="menu">
+         <li>
+            <a ui-sref="home" ui-sref-active="active">Home</a>
+         </li>
+      </ul>
+
+      <ui-view></ui-view>
+
+   </body>
+</html>
