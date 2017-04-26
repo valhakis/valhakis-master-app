@@ -11,4 +11,10 @@ Lorem est alias sapiente fugit adipisicing. Quia itaque ullam libero voluptates 
 
 ```c
 int a = 'a';
+
+int main() {
+
+return 0;
+}
+
 ```
