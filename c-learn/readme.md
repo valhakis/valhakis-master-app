@@ -1,5 +1,11 @@
 # C Something Something
 
+## What do I want to do
+
++ one thing
++ second thing
++ third thing
+
 ## Lorem Ipsum
 
 Lorem est alias sapiente fugit adipisicing. Quia itaque ullam libero voluptates earum earum? Quia beatae omnis rerum inventore error quo blanditiis officia odio dignissimos alias. Aperiam consequatur minima fuga odit!
@@ -32,7 +38,7 @@ int main()
 
 ## Constant variables
 
-```c
+   ```c
 int main()
 {
    const int WIDTH = 800, HEIGHT = 600;
@@ -44,7 +50,7 @@ int main()
 ```
 
 ## Forever loop
-```c
+   ```c
 int main() 
 {
    for (;;) {
@@ -56,5 +62,5 @@ int main()
 ## Makefile
 ```makefile
 all: main.c
-   gcc -o app $^
+gcc -o app $^
 ```
