@@ -2,9 +2,10 @@
 
 ## What do I want to do
 
-+ one thing
-+ second thing
-+ third thing
++ copy one string to another
++ concatenate two strings
++ display the length of the string
++ compare two strings
 
 ## Lorem Ipsum
 
@@ -79,6 +80,23 @@ int main()
    for (j=0; j<10; j++) {
       printf("element[%d]: %d\n", j, n[j]);
    }
+
+   return 0;
+}
+```
+
+## Address of the variable
+
+```c
+int main()
+{
+   int variable;
+
+   int *pointer = NULL;
+
+   *pointer = &variable;
+
+   printf("Address of the variable is %x\n", &variable);
 
    return 0;
 }
