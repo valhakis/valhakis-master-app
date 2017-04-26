@@ -14,7 +14,31 @@ int a = 'a';
 
 int main() {
 
-return 0;
+   return 0;
 }
+```
 
+## Defining something
+
+```c
+#define NAME "William Valhakis"
+
+int main()
+{
+   printf("Name: %s\n", NAME);
+   return 0;
+}
+```
+
+## Constant variables
+
+```c
+int main()
+{
+   const int WIDTH = 800, HEIGHT = 600;
+
+   printf("Width: %d, Height: %d\n", WIDTH, HEIGHT);
+
+   return 0;
+}
 ```
