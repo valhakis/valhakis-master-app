@@ -86,7 +86,7 @@ gl.enableVertexAttribArray(gl.getAttribLocation(sp, 'aVertexPosition'));
 ```
 
 ## 5. Render
-```javscript
+```javascript
 gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
 gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
