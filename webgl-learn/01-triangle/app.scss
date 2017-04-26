@@ -1,0 +1,21 @@
+$mellow: #F0B67F;
+$sunOrange: #FE5F55;
+$purpleTaupe: #474350;
+$lemonYellow: #f2ff49;
+$coralRed: #ff4242;
+$budGreen: #78bc61;
+$blue: #5c80b0;
+
+* {
+   box-sizing: border-box; 
+}
+
+body {
+   background-color: $blue;
+}
+
+canvas {
+   background-color: $coralRed;
+   width: 100%;
+}
+
