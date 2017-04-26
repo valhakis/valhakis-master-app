@@ -9,7 +9,7 @@ webpack --watch
 > Starts the application at http://192.168.0.2:3000
 
 ## Vertex Shader Source
-```c
+```glsl
 attribute vec3 aVertexPosition;
 
 void main() {
@@ -18,7 +18,7 @@ void main() {
 ```
 
 ## Fragment Shader Source
-```c
+```glsl
 void main() {
    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
 }
