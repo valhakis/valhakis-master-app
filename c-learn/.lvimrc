@@ -1,0 +1,1 @@
+nmap \mr :w \| !make && ./bin/app <cr>

@@ -1,0 +1,7 @@
+function! Demo()
+   let arguments = input('arguments: ')
+   execute "!sh % " . arguments
+endfunction
+
+nmap \r :w \| call Demo() <cr>
+nmap \mr :w \| call Demo() <cr>
