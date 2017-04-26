@@ -1,0 +1,10 @@
+@import './_variables.scss';
+@import './_default.scss';
+@import './inc/form-default.scss';
+@import './inc/register-form.scss';
+@import './inc/navbar-default.scss';
+@import './inc/form-one.scss';
+
+body {
+   background-color: $red;
+}

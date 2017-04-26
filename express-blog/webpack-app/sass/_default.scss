@@ -1,0 +1,15 @@
+* {
+   box-sizing: border-box;
+}
+
+a {
+   color: $dark;
+   background-color: $green;
+   padding: 5px;
+   display: inline-block;
+   text-decoration: none;
+   border: 1px solid $cup;
+   &:hover {
+      background-color: $blue;
+   }
+}

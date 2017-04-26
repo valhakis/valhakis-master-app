@@ -1,0 +1,45 @@
+form.form-one {
+   background-color: #321;
+   padding: 5px;
+   text-shadow: 1px 1px 1px $cup;
+   color: $dark;
+   div.title {
+      padding: 10px;
+      background-color: darkRed;
+      color: $blue;
+      margin-bottom: 10px;
+      font-size: 25px;
+   }
+   label, button, input, textarea {
+      display: block;
+      width: 100%;
+   }
+   label {
+      font-size: 20px;
+      margin-bottom: 7px;
+   }
+   input, textarea {
+      padding: 10px 15px 10px 5px;
+      font-size: 15px;
+      letter-spacing: 2px;
+      background-color: #fff;
+      border: 1px solid $cup;
+   }
+   textarea {
+      min-height: 200px;
+   }
+   button[type="submit"] {
+      padding: 10px;
+      background-color: $dark;
+      color: $blue;
+      border: 1px solid $cup;
+   }
+   div.element {
+      background-color: $red;
+      padding: 5px;
+      margin-bottom: 5px;
+      &:last-child {
+         margin-bottom: 0px;
+      }
+   }
+}

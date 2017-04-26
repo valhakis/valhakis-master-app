@@ -1,0 +1,14 @@
+extends /layout.pug
+
+block body
+   h2 Posts
+   form.form-one(action="/post/create", method="post")
+      div.title Create A New Post
+      div.element
+         label Title
+         input(type="text", name="title")
+      div.element
+         label Body
+         textarea(name="title")
+      button(type="submit") Create A New Post
+

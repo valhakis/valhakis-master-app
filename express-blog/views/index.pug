@@ -1,0 +1,37 @@
+extends /layout.pug
+block body
+   a(href="http://192.168.0.2:4020") Link to [webpack-app] dev server
+   br
+   br
+   a(href="http://192.168.0.2:4000") Link to [default] dev server
+
+   form.form-default
+      div.title Example Formation
+      div.element
+         label Title
+         input(type="text")
+      div.element
+         label Title
+         input(type="text")
+      div.element
+         label Title
+         input(type="text")
+      div.element
+         label Title
+         input(type="text")
+      div.element
+         button(type="submit") Submit
+
+   form.form-default.register-form(method="post", action="/user/register")
+      div.title Register 
+      div.element
+         label Username
+         input(type="text")
+      div.element
+         label Password
+         input(type="password")
+      div.element
+         label Confirm Password
+         input(type="password")
+      div.element
+         button(type="submit") Join

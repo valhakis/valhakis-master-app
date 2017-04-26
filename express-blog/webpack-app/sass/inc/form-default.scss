@@ -1,0 +1,68 @@
+.form-default {
+   background-color: $green;
+   margin: 5px;
+   padding: 5px;
+
+   .title {
+      background-color: $blue;
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid $cup;
+   }
+
+   input {
+      background-color: $blue;
+      border: 1px solid $cup;
+   }
+
+   input, label {
+      min-height: 25px;
+      font-size: 14px;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 5px;
+      line-height: 14px;
+      margin: 0px;
+   }
+
+   label {
+      margin-right: 3px;
+      background-color: $blue;
+      border: 1px solid $cup;
+      display: inline-block;
+      min-width: 50px;
+   }
+
+   textarea {
+
+   }
+
+   input, button {
+      &:focus {
+         outline: none;
+      }
+   }
+
+   button[type=submit] {
+      background-color: $dark;
+      border: 1px solid $cup;
+      min-width: 50px;
+      display: inline-block;
+         color: $blue;
+      &:hover {
+         background-color: #111;
+         color: $red;
+      }
+      &:active {
+         background-color: #000;
+         color: $blue;
+      }
+   }
+
+   .element {
+      margin-bottom: 5px;
+      &:last-child {
+         margin-bottom: 0px;
+      }
+   }
+}

@@ -1,0 +1,2 @@
+nmap ,example :echo 'example' <cr>
+let g:ctrlp_working_path_mode = 'c'
