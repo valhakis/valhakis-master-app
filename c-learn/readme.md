@@ -42,3 +42,19 @@ int main()
    return 0;
 }
 ```
+
+## Forever loop
+```c
+int main() 
+{
+   for (;;) {
+      printf("This loop will not run forever.\n");
+   }
+}
+```
+
+## Makefile
+```makefile
+all: main.c
+   gcc -o app $^
+```
