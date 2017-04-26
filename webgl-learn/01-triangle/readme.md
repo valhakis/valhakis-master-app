@@ -36,3 +36,60 @@ var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
 gl.clearColor(0.1, 0.1, 0.1, 1.0);
 gl.viewport(0, 0, canvas.width, canvas.height);
 ```
+
+## 2. Create shader
+```javascript
+var shader = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(shader, source);
+gl.compileShader(shader);
+
+if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+   console.log(gl.getShaderInfoLog(shader));
+   gl.deleteShader(shader);
+}
+```
+
+## 3. Create shader program;
+```javascript
+var vs = create_shader('vs', source);
+var fs = create_shader('fs', source);
+
+var sp = gl.createProgram();
+gl.attachShader(sp, vs);
+gl.attachShader(sp, fs);
+gl.linkProgram(sp);
+
+if (!gl.getProgramParameter(shader, gl.COMPILE_STATUS)) {
+   console.log(gl.getProgramInfoLog(shader));
+   gl.deleteShader(shader);
+}
+
+gl.useProgram(sp);
+```
+
+## 4. Set up object
+
+```javascript
+var vbo = gl.createBuffer();
+
+gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+
+var vertices = [
+   -0.5, -0.5, 0.0,
+   0.5, -0.5, 0.0,
+   0.0, 0.5, 0.0,
+];
+
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+
+gl.enableVertexAttribArray(gl.getAttribLocation(sp, 'aVertexPosition'));
+```
+
+## 5. Render
+```jaavscript
+gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+gl.vertexAttribPointer(gl.getAttribLocation(sp, 'aVertexPosition'), 3, gl.FLOAT, false, 0, 0);
+gl.drawArrays(gl.TRIANGLE_STRIP, 0, 3);
+```
