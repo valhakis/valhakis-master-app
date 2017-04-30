@@ -1,0 +1,36 @@
+@import '../client/sass/_variables.scss';
+@import '../app2/sass/Menu.scss';
+
+* {
+   box-sizing: border-box; 
+}
+
+body {
+   background-color: $red;
+   font-family: 'Courier New';
+   color: $dark;
+}
+
+.message {
+   background-color: $blue;
+   padding: 10px;
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   z-index: 999;
+   margin: 10px;
+   border: 1px solid $cup;
+   overflow: hidden;
+   .close-button {
+      &:hover {
+         color: $red;
+         cursor: pointer;
+      }
+      float: right;
+   }
+}
+
+.menu {
+   border-left: 1px solid $cup;
+}

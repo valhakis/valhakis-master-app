@@ -1,0 +1,16 @@
+.message {
+   background-color: $blue;
+   min-height: 50px;
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   text-align: center;
+   margin: 5px;
+   border: 2px solid $cup;
+   line-height: 50px;
+   color: $dark;
+   &:hover {
+      background-color: $yellow;
+   }
+}

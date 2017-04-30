@@ -5,7 +5,13 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
    context: __dirname,
    devtool: 'eval-source-map',
-   entry: './client/index.js',
+   entry: {
+      'app': './client/index.js',
+      'app1': './app1/index.js',
+      'app2': './app2/index.js',
+      'app3': './app3/index.js',
+      'upload-app': './apps/upload-app/index.js',
+   },
    output: {
       path: __dirname + '/dist',
       filename: '[name].out.js'
@@ -38,8 +44,30 @@ module.exports = {
          }
       }),
       new HtmlWebpackPlugin({
+         chunks: ['app'],
          template: './client/index.html',
-         favicon: './client/favicon.ico'
-      })
+         favicon: './client/favicon.ico',
+         filename: './index.html'
+      }),
+      new HtmlWebpackPlugin({
+         chunks: ['app1'],
+         filename: './app1/index.html'
+      }),
+      new HtmlWebpackPlugin({
+         chunks: ['app2'],
+         filename: './app2/index.html'
+      }),
+      new HtmlWebpackPlugin({
+         chunks: ['app3'],
+         template: './app3/index.html',
+         favicon: './client/favicon.ico',
+         filename: './app3/index.html'
+      }),
+      new HtmlWebpackPlugin({
+         chunks: ['upload-app'],
+         template: './apps/upload-app/index.html',
+         favicon: './client/favicon.ico',
+         filename: './apps/upload-app/index.html'
+      }),
    ]
 };

@@ -1,0 +1,29 @@
+.navbar {
+   background-color: $dark;
+   font-family: 'Helvetica';
+   .container {
+
+   }
+   .menu {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+      padding: 5px;
+   }
+   li {
+      float: left;
+   }
+   a {
+      color: #ccc;
+      padding: 3px;
+      text-decoration: none;
+      background-color: $red;
+      margin-right: 5px;
+      display: block;
+      border: 1px solid $cup;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

@@ -1,0 +1,17 @@
+@import '../../client/sass/_variables.scss';
+@import '../../app2/sass/Menu.scss';
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: $green;
+   margin: 0px;
+   padding: 0px;
+}
+
+canvas {
+   background-color: $red;
+   display: block;
+}

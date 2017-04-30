@@ -1,0 +1,27 @@
+.menu {
+   background-color: $blue;
+   min-height: 50px;
+   min-width: 50px;
+   position: fixed;
+   right: 0px;
+   z-index: 333;
+   top: 0px;
+   bottom: 0px;
+   ul {
+      padding: 0px;
+      list-style: none;
+      margin: 2px;
+   }
+   li {
+
+      margin-bottom: 2px;
+   }
+   a {
+      display: block;
+      padding: 3px 2px 3px 2px;
+      text-decoration: none;
+      color: $dark;
+      background-color: $gray;
+      border: 1px solid $cup;
+   }
+}
