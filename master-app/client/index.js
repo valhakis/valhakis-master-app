@@ -1,4 +1,6 @@
 import './sass/main.scss';
+import './Editor.js';
+import './inc/Something.js';
 
 import Menu from '../app2/Menu.js';
 

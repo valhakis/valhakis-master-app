@@ -72,13 +72,6 @@
    "wsh"           : false, 
    "yui"           : false,
 
-   "globals"       : {
-      "$": true,
-      "angular": true,
-      "Vue": true,
-      "ace": true,
-      "GET": true,
-      "MY": true
-   }        
+   "globals"       : {}        
 }
 

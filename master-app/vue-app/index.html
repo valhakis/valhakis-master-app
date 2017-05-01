@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Vue App</title>
+   </head>
+   <body>
+
+      <nav class="navbar">
+         <div class="container">
+            <ul class="menu">
+               <li>
+                  <a href="/">Home</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+
+      <h1>Vue App</h1>
+
+      <!-- App 1 -->
+      <div id="app">
+         {{ message }}
+      </div>
+
+      <!-- App 2 -->
+      <div id="app-2">
+         <span v-bind:title="message">
+            Hover your mose over me for a few seconds to see my dymanically bound title!
+         </span>
+      </div>
+
+      <!-- App 3 -->
+      <div id="app-3">
+         <p v-if="seen">Now you see me.</p>
+      </div>
+
+      <!-- App 4 -->
+      <div id="app-4">
+         <ol>
+            <li v-for="todo in todos">
+               {{ todo.text }}
+            </li>
+         </ol>
+      </div>
+
+      <!-- App 5 -->
+      <div id="app-5">
+         <p>{{ message }}</p>
+         <button v-on:click="reverseMessage">Reverse Message</button>
+      </div>
+
+      <!-- App 6 -->
+      <div id="app-6">
+         <p>{{ message }}</p>
+         <input v-model="message">
+      </div>
+
+      <hr>
+
+      <!-- App 7 -->
+      <div id="app-7">
+         <div>{{ message }}</div>
+         <ol>
+            <todo-item></todo-item>
+         </ol>
+      </div>
+
+      <script src="http://192.168.0.2:4000/bower_components/vue/dist/vue.min.js"></script>
+   </body>
+</html>

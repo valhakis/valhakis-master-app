@@ -15,11 +15,35 @@
 
       <ul>
          <li><a href="/apps/upload-app">Upload App</a></li>
+         <li><a href="/vue-app">Vue App</a></li>
       </ul>
 
+      <form method="post" action="http://192.168.0.2:4000/api/code">
+         <h1>An Example Form</h1>
+         <input type="text" name="name">
+         <button type="submit">Submit</button>
+      </form>
+
+      <div id="something">
+         <h1>Interesting something</h1>
+
+         <div class="container">
+            <form id="something-add">
+               <textarea name="body" cols="30" rows="10"></textarea>
+               <button type="submit">Add Something</button>
+            </form>
+            <button id="something-create-db-btn">Create Database / Table ...</button>
+            <button id="something-delete-db-btn">Delete Database / Table ...</button>
+         </div>
+
+
+      </div>
+
+      <script src="http://192.168.0.2:4000/bower_components/jquery/dist/jquery.min.js"></script>
       <script src="http://192.168.0.2:4000/bower_components/mathjs/dist/math.min.js"></script>
       <script src="http://192.168.0.2:4000/bower_components/gl-matrix/dist/gl-matrix-min.js"></script>
       <script src="http://192.168.0.2:4000/bower_components/sylvester/sylvester.js"></script>
       <script src="http://192.168.0.2:4000/bower_components/glUtils/glUtils.js"></script>
+      <script src="http://192.168.0.2:4000/bower_components/ace-builds/src-min/ace.js"></script>
    </body>
 </html>

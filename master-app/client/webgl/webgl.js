@@ -2,7 +2,7 @@ import Library from './lib';
 
 class WebGL {
    constructor() {
-      console.log('WebGL constructed');
+      // console.log('WebGL constructed');
    }
    start() {
       var i = 0;

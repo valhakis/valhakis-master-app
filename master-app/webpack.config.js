@@ -11,6 +11,7 @@ module.exports = {
       'app2': './app2/index.js',
       'app3': './app3/index.js',
       'upload-app': './apps/upload-app/index.js',
+      'vue-app': './vue-app/index.js',
    },
    output: {
       path: __dirname + '/dist',
@@ -68,6 +69,17 @@ module.exports = {
          template: './apps/upload-app/index.html',
          favicon: './client/favicon.ico',
          filename: './apps/upload-app/index.html'
+      }),
+      new HtmlWebpackPlugin({
+         chunks: ['vue-app'],
+         template: './vue-app/index.html',
+         favicon: './client/favicon.ico',
+         filename: './vue-app/index.html'
+      }),
+      new webpack.DefinePlugin({
+         'MY': JSON.stringify({
+            host: 'http://192.168.0.2:4000'
+         })
       }),
    ]
 };
