@@ -57,3 +57,17 @@ form.onsubmit = function(event) {
 
    return false;
 };
+
+var somethings = [];
+
+var xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function() {
+   if (xhr.status == 200 && xhr.readyState == 4) {
+      somethings = JSON.parse(xhr.responseText);
+      console.log(somethings);
+   }
+};
+
+xhr.open('GET', 'http://192.168.0.2:4000/api/something', true);
+xhr.send();

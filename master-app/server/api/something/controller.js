@@ -13,7 +13,7 @@ exports.create = function(req, res) {
 
    Something.create(something, function(err, something) {
       if (err) throw err;
-      res.statys(200).send(something);
+      res.status(200).send(something);
    });
 };
 
@@ -42,5 +42,11 @@ exports.delete_db = function(req, res) {
             message: 'Table has been deleted.'
          });
       }
+   });
+};
+
+exports.all = function(req, res) {
+   Something.findAll(function(err, somethings) {
+      res.status(200).send(somethings);
    });
 };

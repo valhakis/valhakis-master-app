@@ -49,15 +49,7 @@ exports.create_db = function(req, res) {
    });
 };
 
-exports.create = function(something, cb) {
-   db.run('insert into something (body) values ($body)', {
-      $body: something.body
-   }, function(err, res) {
-      console.log(err, res);
-   });
-   //var stmt = db.prepare('insert into something (body) values (?)');
-   //stmt.run(something.body);
-};
+
 
 db.serialize(function() {
    db.all('select * from something', function(err, rows) {
@@ -69,6 +61,29 @@ db.serialize(function() {
    });
 });
 
+var GetById = function(id, cb) {
+   db.serialize(function() {
+      db.get('select * from something where id = $id', {$id: id}, function(err, row) {
+         if (err) throw err;
+         cb(null, row);
+      });
+   });
+};
+
+var CreateNew = function(something, cb) {
+   db.run('insert into something (body) values ($body)', {$body: something.body}, function(err) {
+      if (err) throw err;
+      GetById(this.lastID, function(err, something) {
+         if (err) throw err;
+         cb(null, something);
+      });
+   });
+};
+
+var something = {
+   body: `I'm a new thing`
+};
+
 db.serialize(function() {
    db.run('insert into something (body) values ($body)', {
       $body: 'this is the body'
@@ -77,10 +92,11 @@ db.serialize(function() {
          console.log(err);
       } else {
          var lastID = this.lastID;
-         db.run('select * from something where id = $id', {
+         db.get('select * from something where id = $id', {
             $id: lastID
          }, function(err, row) {
-            console.log(err, row, this);
+            if (err) throw err;
+            console.log('row:', row);
          });
       }
    });
@@ -92,3 +108,27 @@ db.serialize(function() {
 // console.log(row);
 // });
 // console.log(somethings);
+
+exports.create = function(something, cb) {
+   CreateNew(something, function(err, something) {
+      if (err) throw err;
+      cb(err, something);
+   });
+};
+
+function FindAll(callback) {
+   db.serialize(function() {
+      db.all('select * from something', function(err, rows) {
+         if (err) throw err;
+         console.log(rows);
+         callback(null, rows);
+      });
+   });
+}
+
+exports.findAll = function(callback) {
+   FindAll(function(err, somethings) {
+      if (err) throw err;
+      callback(null, somethings);
+   });
+};
