@@ -1,0 +1,16 @@
+extends ./layout
+block content
+   h1 Registration page.
+   p Become a member.
+
+   form(method="POST", action="/users/register")
+      div.form-group
+         label Email
+         input.form-control(type="email", name="email")
+      div.form-group
+         label Password
+         input.form-control(type="password", name="password")
+      div.form-group
+         label Password Confirmation
+         input.form-control(type="password", name="password2")
+      button.btn.btn-default(type="submit") Become a member.

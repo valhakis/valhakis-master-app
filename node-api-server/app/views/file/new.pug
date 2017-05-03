@@ -1,0 +1,8 @@
+extends ./layout
+block content
+   h2 Upload a new file.
+   form(method="POST", action="/files/create", enctype="multipart/form-data")
+      div.form-group
+         label File
+         input.form-control(type="file", name="file")
+      button.btn.btn-default(type="submit") Upload file

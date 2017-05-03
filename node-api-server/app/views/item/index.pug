@@ -1,0 +1,14 @@
+extends /item/layout
+
+block content
+   h1 This is item index page.
+
+   h2 List of all the items.
+
+   ul.list-group
+      each item in items
+         li.list-group-item
+            p= item.name + " | " + item.image_name
+            img(src="/uploads/item/" + item._id, width="100", height="100")
+            hr
+            a.btn.btn-danger.btn-xs(href="/items/delete/" + item._id) Delete

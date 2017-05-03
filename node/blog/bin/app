@@ -1,0 +1,36 @@
+#!/home/william/.nvm/versions/node/v7.4.0/bin/node
+
+var start_webpack = function() {
+   var spwn = spawn('webpack', ['--watch'], options);
+
+   spwn.on('close', (code) => {
+      console.log(`Webpack has been closed with code ${code}`);
+   });
+
+   return spwn;
+};
+
+var watch = require('node-watch');
+var spawn = require('child_process').spawn;
+
+var options = {
+   stdio: 'inherit'
+};
+
+var spawn_nodemon = spawn('nodemon', ['server'], options);
+
+var spawn_webpack = start_webpack();
+
+watch('./webpack.config.js', function() {
+   console.log('webpack.config.js has been changed.');
+
+   spawn_webpack.kill();
+
+   spawn_webpack.on('close', function() {
+      spawn_webpack = start_webpack();
+   });
+});
+
+spawn_nodemon.on('close', (code) => {
+   console.log(`Nodemon server has been closed with code ${code}`);
+});

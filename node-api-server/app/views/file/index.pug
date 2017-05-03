@@ -1,0 +1,18 @@
+extends ./layout
+block content
+   h1 This is files page
+
+   h2 Upload new file
+   a(href="/files/new") link to upload page
+
+   h2 Uploaded files
+
+   ul.list-group
+      each file in files
+         li.list-group-item
+            -if(file.mimetype=='image/jpeg' || file.mimetype=='image/png')
+               img(height="100", src="/uploads/" + file.filename)
+            p This is a file.
+            pre= file
+            hr
+            a.btn.btn-danger.btn-xs(href="/files/delete/" + file._id) Delete a file.
