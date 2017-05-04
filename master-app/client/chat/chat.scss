@@ -1,0 +1,43 @@
+@import '../sass/_variables.scss';
+
+* {
+   box-sizing: border-box; 
+}
+
+div#chat {
+   background-color: $red;
+   min-height: 500px;
+   ul#chat-messages {
+
+   }
+   form#chat-form {
+
+   }
+}
+
+chat-directive {
+   margin: 10px;
+   display: block;
+   padding: 10px;
+   box-sizing: border-box;
+   border: 2px solid $dark;
+   .chat-form {
+      display: block;
+      overflow: hidden;
+      display: block;
+      border: 2px solid $yellow;
+      box-sizing: border-box;
+      width: 100%;
+      input {
+         box-sizing: border-box;
+         width: 100%;
+         margin: 10px;
+         margin-bottom: 0px;
+      }
+      button {
+         margin: 10px;
+      }
+   }
+   display: block;
+   background-color: $red;
+}

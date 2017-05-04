@@ -26,7 +26,7 @@
    "maxlen"        : false,
    "varstmt"       : false,
 
-   "asi"           : false,     
+   "asi"           : true,     
    "boss"          : false,    
    "debug"         : false,   
    "eqnull"        : false,  
@@ -78,6 +78,7 @@
       "Vue": true,
       "ace": true,
       "GET": true,
+      "register": true,
       "MY": true
    }        
 }

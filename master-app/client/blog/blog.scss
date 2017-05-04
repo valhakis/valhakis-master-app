@@ -1,0 +1,57 @@
+@import '../sass/_variables.scss';
+
+h1.title {
+   background-color: $dark;
+   color: $gray;
+   margin: 5px;
+   padding: 10px 10px;
+}
+
+ul.menu.blog-menu {
+   position: relative;
+   background-color: $dark;
+   display: block;
+   visibility: visible;
+   opacity: 1.0;
+   display: block;
+   list-style: none;
+   padding: 0px;
+   margin: 0px;
+   margin: 5px;
+   padding: 10px;
+   overflow: hidden;
+   height: inherit;
+   width: inherit;
+   li {
+      float: left;
+      margin-right: 5px;
+   }
+   a {
+      display: block;
+      padding: 3px 5px;
+      line-height: 18px;
+      &:hover {
+         color: red;
+      }
+   }
+}
+
+
+.blog-ui-view {
+   margin: 5px;
+   border: 2px solid $dark;
+   display: block;
+   padding: 5px;
+   background-color: $gray;
+   a {
+      color: $red;
+      text-shadow: 1px 1px 1px #000;
+   }
+}
+
+.form.blog-form {
+   overflow: hidden;
+   textarea {
+      min-height: 200px;
+   }
+}

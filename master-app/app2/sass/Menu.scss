@@ -1,16 +1,44 @@
+#my-menu-x-hover {
+   &.is-hidden {
+      visibility: hidden;
+   }
+   background-color: $dark;
+   width: 5px;
+   position: fixed;
+   right: 0px;
+   top: 0px;
+   bottom: 0px;
+   padding: 5px;
+   margin: 5px;
+   opacity: 0.0;
+   &:hover {
+      background-color: $red;
+   }
+   z-index: 100000;
+}
 .menu {
-   background-color: $blue;
-   min-height: 50px;
-   min-width: 50px;
+   .btn-close {
+      width: 90px;
+      margin: 5px;
+      font-size: 12px;
+   }
+   background-color: $blue; 
+   background-color: rgba(50, 50, 255, 0.5);
    position: fixed;
    right: 0px;
    z-index: 333;
    top: 0px;
+   width: 0px;
    bottom: 0px;
+   transition: width 0.2s;
+   &.is-toggled {
+      width: 100px;
+   }
    ul {
       padding: 0px;
       list-style: none;
       margin: 2px;
+      opacity: 1.0;
    }
    li {
 
@@ -23,5 +51,9 @@
       color: $dark;
       background-color: $gray;
       border: 1px solid $cup;
+      &:hover {
+         color: $red;
+         text-shadow: 1px 1px 1px $cup;
+      }
    }
 }

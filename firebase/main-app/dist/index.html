@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" media="all">
+
+      <script defer src="/__/firebase/3.9.0/firebase-app.js"></script>
+      <!-- include only the Firebase features as you need -->
+      <script defer src="/__/firebase/3.9.0/firebase-auth.js"></script>
+      <script defer src="/__/firebase/3.9.0/firebase-database.js"></script>
+      <script defer src="/__/firebase/3.9.0/firebase-messaging.js"></script>
+      <script defer src="/__/firebase/3.9.0/firebase-storage.js"></script>
+      <!-- initialize the SDK after all desired features are loaded -->
+      <script defer src="/__/firebase/init.js"></script>
+
+      <script src="/bower_components/angular/angular.min.js"></script>
+      <script src="/bower_components/angularfire/dist/angularfire.min.js"></script>
+      <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+   <link rel="shortcut icon" href="favicon.ico"></head>
+   <body>
+
+      <div ng-app="App" class="container">
+
+         <navbar></navbar>
+
+         <h1>App</h1>
+
+         <ui-view></ui-view>
+
+      </div>
+
+
+   <script type="text/javascript" src="app.out.js"></script></body>
+</html>

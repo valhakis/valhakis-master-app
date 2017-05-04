@@ -15,9 +15,12 @@ menu.link('App4', '/app4');
 import NavbarDirective from './navbar';
 import CanvasDirective from './canvas';
 
+import ChatModule from './chat';
+import BlogModule from './blog';
+
 import WebGLModule from './webgl';
 
-angular.module('app', ['ui.router', WebGLModule]);
+angular.module('app', ['ui.router', WebGLModule, ChatModule, BlogModule]);
 
 angular.module('app').directive('navbar', NavbarDirective);
 angular.module('app').directive('canvasApp', CanvasDirective);

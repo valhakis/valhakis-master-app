@@ -22,6 +22,7 @@
     "gl-matrix": "^2.3.2",
     "glUtils": "^0.0.1",
     "vue": "^2.3.0",
-    "ace-builds": "^1.2.6"
+    "ace-builds": "^1.2.6",
+    "bootstrap": "^3.3.7"
   }
 }

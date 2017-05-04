@@ -1,0 +1,23 @@
+{
+  "name": "main-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "valhakis <william.valhakis@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/valhakis/valhakis-master-app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.1",
+    "angularfire": "^2.3.0"
+  }
+}

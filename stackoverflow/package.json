@@ -1,0 +1,29 @@
+{
+  "name": "stackoverflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-es2015": "*",
+    "browser-sync": "*",
+    "browser-sync-webpack-plugin": "*",
+    "css-loader": "*",
+    "express": "^4.15.2",
+    "html-webpack-plugin": "*",
+    "node-sass": "*",
+    "pug": "*",
+    "pug-loader": "*",
+    "sass-loader": "*",
+    "style-loader": "*",
+    "webpack": "*",
+    "websocket": "^1.0.24"
+  }
+}
